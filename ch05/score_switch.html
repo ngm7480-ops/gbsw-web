@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doucment</title>
+    </head>
+    <body>
+        <hl>홀수 짝수 구분</hl>
+        <input
+            id = "input_number"
+            type = "number"
+            placeholder = "점수를 입력하세요"
+        />
+        <button id = "btn" type = "button">완료</button>
+        <div id = "result"></div>
+    </body>
+</html>
+
+    <script>
+    document.getElementById("btn").onclick = function() {
+        const num = document.getElementById("input_number").value;
+        let result = ""
+        if (num > 100 || num < 0) {
+            result = "유효하지 않은 값";
+        } else {
+            switch (Math.trunc(num / 10)) {
+                case 10:
+                case 9:
+                    result = "A"
+                    break;
+                case 9:
+                    console.log();
+                    break;
+                case 8:
+                    console.log()
+                case 7:
+                    console.log()
+                case 6:
+                    console.log()
+                    break;
+                default :
+                    result = "F"
+                    break;
+            }
+        }
+
+        alert(result);
+        document.getElementById("result").textContent = result;
+    }
+    </script>
+    </body>
+</html>
